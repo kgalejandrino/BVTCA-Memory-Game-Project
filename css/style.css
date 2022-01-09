@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Bangers', cursive;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    }
+    
+.game-title {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 100px;
+    color: white;
+    font-display: rgba();
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}
+.btn{
+    text-transform: uppercase;
+    margin: 1rem;
+    width: 100%;
+    height: 8rem;
+    width: 16.2rem;
+    background:url(../img/wood-panel.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor:pointer;
+    border:none;
+  }
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}  
+
+
+@media screen and (max-width: 1027px)  {
+  .btn {
+    height: 4rem;
+    width: 8.1rem; 
+  }
+}
