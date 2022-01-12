@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c9bb54147.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
-    <div class = "container">
-        <div class="menu d-flex align-items-center justify-content-center flex-column mx-auto" >
-            <h1 class="game-title">Hasty</h1>
-                <div><input class="btn" type="submit" value="EASY" style="font-size: 30px; color: white"></div>           
-                <div><input class="btn" type="submit" value="MEDIUM" style="font-size: 30px; color: white"></div>
-                <div><input class="btn" type="submit" value="HARD" style="font-size: 30px; color: white;"></div>
+    <main class="d-flex align-items-center justify-content-center flex-column mx-auto">
+        <div class="container" id="menu-option">
+            <h1 class="game-title">Memory Game</h1>
+            <div class="d-flex align-items-center justify-content-center flex-column mx-auto">
+                <button class="btn" value="EASY">Easy</button>           
+                <button class="btn" value="MEDIUM">Medium</button>  
+                <button class="btn" value="HARD">Hard</button>  
+            </div>
         </div>
-    </div>
+        <div id="loading">
+            <span>Loading - </span>
+            <span id="percent">0</span>
+            <span>%</span>
+            <div class="d-flex justify-content-center">
+                <span id="icon-play"><i class="fas fa-play"></i></span>
+            </div>
+        </div>
+        <!-- <div class="sound-wrapper">
+            <audio controls autoplay>
+                <source src="/img/Wind-Up-Things.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <span class="icon-sound"><i class="fas fa-music"></i></span>
+        </div> -->
+    </main>
     <script src="js/script.js"></script>
 </body>
 <style>

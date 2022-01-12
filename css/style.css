@@ -1,49 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
 }
 
 body {
-    font-family: 'Bangers', cursive;
-    background-image: url(../img/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    }
-    
+  font-family: 'Bangers', cursive;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+}
+
+/*---- Main Menu ----*/
+#menu-option { display: none; }
+
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  letter-spacing: 4px;
+  color: #f0bf46; 
+  text-shadow: -2px 0 #1b3a35, 0 2px #1b3a35, 2px 0 #1b3a35, 0 -2px #1b3a35;
+}
+
+#icon-play { pointer-events: none;}
+
+@keyframes beat{
+	to { transform: scale(1.2); }
+}
+
 .game-title {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 100px;
-    color: white;
-    font-display: rgba();
-    padding-top: 8rem;
-    padding-bottom: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 100px;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #f0bf46; 
+  text-shadow: -2px 0 #1b3a35, 0 2px #1b3a35, 2px 0 #1b3a35, 0 -2px 
 }
+
+/* Button Selection */
 .btn{
-    text-transform: uppercase;
-    margin: 1rem;
-    width: 100%;
-    height: 8rem;
-    width: 16.2rem;
-    background:url(../img/wood-panel.png);
-    background-size: cover;
-    background-repeat: no-repeat; 
-    cursor:pointer;
-    border:none;
-  }
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  margin: 1rem;
+  width: 100%;
+  height: 8rem;
+  width: 16.2rem;
+  background:url(../img/wood-panel.png);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  cursor:pointer;
+  border:none;
+  color: #fff;
+  font-size: 30px;
 }
 
+.btn:hover,
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}  
+  transform: scale(1.1);
+  color: #fff;
+}
 
+/* Sounds */
+.sound-wrapper {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+}
+
+.icon-sound {
+  font-size: 32px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1027px)  {
   .btn {
