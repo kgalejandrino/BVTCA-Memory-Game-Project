@@ -2,11 +2,12 @@
 const bgMusic = document.querySelector('audio');
 const musicIcon = document.querySelector('.icon-sound');
 const loadingPercent = document.getElementById('percent');
-const iconPlay = document.getElementById('icon-play');
+const playIcon = document.getElementById('icon-play');
 const menuOption = document.getElementById('menu-option');
 const loadingUI = document.getElementById('loading');
 
 let percent = 0;
+let playing = false;
 
 /* Function: Randomly increment percentage from 0 to 100% */
 const loading = () => {
@@ -15,9 +16,9 @@ const loading = () => {
         percent += randomNum;
         if(percent > 100) {
             percent = 100;
-            iconPlay.style.animation = 'beat .35s infinite alternate';
-            iconPlay.style.cursor = 'pointer';
-            iconPlay.style.pointerEvents = 'auto';
+            playIcon.style.animation = 'beat .35s infinite alternate';
+            playIcon.style.cursor = 'pointer';
+            playIcon.style.pointerEvents = 'auto';
             clearInterval(timer);
         }
         loadingPercent.innerHTML = percent;
@@ -25,10 +26,25 @@ const loading = () => {
 }
 
 /* Event: Click to open menu */
-iconPlay.addEventListener('click', () => {
+playIcon.addEventListener('click', () => {
     loadingUI.style.display = 'none';
     menuOption.style.display = 'block';
+    bgMusic.play();
+    playing = true;
 })
+
+/* Event: Click to mute background music */
+musicIcon.addEventListener('click', () => {
+    if(playing) {
+        playing = false;
+        musicIcon.innerHTML = 'music_off';
+        bgMusic.pause()
+    } else {
+        playing = true; 
+        musicIcon.innerHTML = 'music_note';
+        bgMusic.play();
+    }
+});
 
 loading();
 
