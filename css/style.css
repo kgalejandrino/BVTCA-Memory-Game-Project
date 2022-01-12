@@ -10,9 +10,12 @@
     border: none;
 }
 #grid {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: 1px solid #000;
+    margin: 5px;
+    padding: 10px;
+    outline: 1px solid rgb(87, 97, 88);
     display: inline-block;
+    background-image: url("./images/dragon2.png");
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
