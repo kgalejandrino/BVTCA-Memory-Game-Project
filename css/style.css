@@ -1,16 +1,14 @@
 #container {
     position: relative;
     top: 30px;
-    outline: 2px solid #000;
     font-size: 0;
     margin: auto;
-    height: 500px;
-    width: 560px;
+    height: 650px;
+    width: 740px;
     padding: 0;
-    border: none;
 }
 #grid {
-    margin: 5px;
+    margin: 3px;
     padding: 10px;
     outline: 1px solid rgb(87, 97, 88);
     display: inline-block;
