@@ -7,12 +7,35 @@ function createGrid() {
     const body = document.querySelector("#container");
     for (var i = 0; i < NUM_COLS; i++) {
         for (var j = 0; j < NUM_ROWS; j++) {
-            let grid = document.createElement('div');
-            grid.id = "grid";
-            grid.style.width = 560/NUM_COLS + 'px';
-            grid.style.height = 500/NUM_ROWS + 'px';
-            body.appendChild(grid);
+            let flipBox = document.createElement('div');
+            flipBox.classList.add("flip-box");
+            flipBox.style.width = 560/NUM_COLS + 'px';
+            flipBox.style.height = 500/NUM_ROWS + 'px';
+
+            let flipBoxInner = document.createElement('div');
+            flipBoxInner.classList.add("flip-box-inner");
+
+            let flipBoxFront = document.createElement('div');
+            flipBoxFront.classList.add(`flip-box-front`);
+
+            let flipBoxBack = document.createElement('div');
+            flipBoxBack.classList.add("flip-box-back");
+
+            flipBox.appendChild(flipBoxInner);
+            flipBoxInner.appendChild(flipBoxFront);
+            flipBoxInner.appendChild(flipBoxBack);
+            body.appendChild(flipBox);
         };
     };
 }
+
+document.querySelector("#container").addEventListener('click', (event) => {
+
+});
+
+
+
+
+
+
 
