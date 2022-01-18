@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <main class="d-flex align-items-center justify-content-center flex-column mx-auto">
+        <div class="container" id="menu-option">
+            <h1 class="game-title">Memory Game</h1>
+            <div class="d-flex align-items-center justify-content-center flex-column mx-auto">
+                <button class="btn" value="EASY">Easy</button>           
+                <button class="btn" value="MEDIUM">Medium</button>  
+                <button class="btn" value="HARD">Hard</button>  
+            </div>
+        </div>
+        <div id="loading">
+            <span>Loading - </span>
+            <span id="percent">0</span>
+            <span>%</span>
+            <div class="d-flex justify-content-center">
+                <span class="material-icons" id="icon-play">play_arrow</span>
+            </div>
+        </div>
+        <div class="sound-wrapper">
+            <audio loop>
+                <source src="/img/Wind-Up-Things.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <span class="material-icons icon-sound">music_note</span>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+<style>
+    
+</style>
+</html>
