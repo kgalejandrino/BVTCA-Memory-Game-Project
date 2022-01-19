@@ -12,28 +12,28 @@
 </head>
 <body>
     <main class="d-flex align-items-center justify-content-center flex-column mx-auto">
-        <div class="container" id="menu-option">
+        <div class="container menu">
             <h1 class="game-title">Memory Game</h1>
-            <div class="d-flex align-items-center justify-content-center flex-column mx-auto">
-                <button class="btn" value="EASY">Easy</button>           
-                <button class="btn" value="MEDIUM">Medium</button>  
-                <button class="btn" value="HARD">Hard</button>  
+            <div class="d-flex align-items-center justify-content-center flex-column mx-auto option">
+                <a class="btn" data-level="easy" href="#">Easy</a>         
+                <a class="btn" data-level="medium" href="#">Medium</a>         
+                <a class="btn" data-level="hard" href="#">Hard</a>         
             </div>
         </div>
-        <div id="loading">
+        <div class="loading">
             <span>Loading - </span>
-            <span id="percent">0</span>
+            <span class="percent">0</span>
             <span>%</span>
             <div class="d-flex justify-content-center">
-                <span class="material-icons" id="icon-play">play_arrow</span>
+                <span class="material-icons icon-play">play_arrow</span>
             </div>
         </div>
         <div class="sound-wrapper">
-            <audio loop>
+            <audio loop class="background-music">
                 <source src="/img/Wind-Up-Things.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
-            <span class="material-icons icon-sound">music_note</span>
+            <span class="material-icons icon-bg">music_note</span>
         </div>
     </main>
     <script src="js/script.js"></script>
