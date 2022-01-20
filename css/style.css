@@ -9,13 +9,20 @@ body {
   background-image: url(../img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   color: #fff;
 }
 
 /*---- Main Menu ----*/
-.menu { display: none; }
+.menu { 
+  display: none; 
+  height: 100vh;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+/* .option { display: none !important; } */
 .loading {
   position: absolute;
   left: 50%;
@@ -40,7 +47,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 100px;
-  padding-top: 8rem;
   padding-bottom: 2rem;
   text-align: center;
   color: #f0bf46; 
@@ -52,18 +58,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  text-transform: uppercase;
-  margin: 1rem;
-  width: 100%;
-  height: 8rem;
-  width: 16.2rem;
-  background:url(../img/wood-panel.png);
-  background-size: cover;
-  background-repeat: no-repeat; 
-  cursor:pointer;
-  border:none;
-  color: #fff;
-  font-size: 30px;
+    text-transform: uppercase;
+    margin: 1rem;
+    width: 100%;
+    height: 8rem;
+    width: 16.2rem;
+    background:url(../img/wood-panel.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor:pointer;
+    border:none;
+    color: #fff;
+    font-size: 30px;
+    outline: none;
 }
 
 .btn:hover,
@@ -89,7 +96,32 @@ body {
   display: none;
 }
 
-/*---- Grid Styling ---- */
+/*---- Game Styling ---- */
+.game-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+}
+
+.card {
+  height: 150px;
+  width: 125px;
+  background-color: #fff;
+  box-shadow: 0 0 2px 2px #fff;
+  border-radius: 8px;
+  margin: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
 #grid {
     position: absolute;
     top: 50%;
@@ -97,16 +129,6 @@ body {
     transform: translate(-50%, -50%);
     height: 650px;
     width: 740px;
-}
-
-.flip-box {
-    background-color: #fff;
-    box-shadow: 0 0 2px 2px #fff;
-    border-radius: 8px;
-    margin: 6px;
-    padding: 4px;
-    display: inline-block;
-    box-sizing: content-box;
 }
 
 .flip-box-inner {
@@ -118,7 +140,7 @@ body {
     transform-style: preserve-3d;
 }
 
-.flip-box:hover .flip-box-inner {
+.card.visible .flip-box-inner {
     transform: rotateY(180deg);
 }
 
@@ -142,6 +164,14 @@ body {
 .flip-box-back {
     background-color: black;
     transform: rotateY(180deg);
+}
+
+.flip-box-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transform: scale(0.8);
 }
 
 @media screen and (max-width: 1027px)  {
